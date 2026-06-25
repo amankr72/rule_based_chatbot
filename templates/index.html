@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chill bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="chat-container">
+
+        <h1>Chillbot</h1>
+
+        <div id="chat-box"></div>
+
+        <input
+            type="text"
+            id="message"
+            placeholder="Type a message..."
+        >
+
+        <button onclick="sendMessage()">
+            ➤
+        </button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
