@@ -80,6 +80,10 @@ rules = {
     ],
     r"who (made|created) you(.*)": [
         "Aman created me. He is a great programmer and a good friend of mine.",
+    ],
+    r"^you are (?!bot|a bot$)(.*)": [
+        "No, you are {0}!",
+        "Why do you think I am {0}?"
     ]
 
 }
@@ -88,17 +92,21 @@ rules = {
 # Pronoun Reflection
 # -----------------------------
 def replace_pronouns(message):
+    message = message.lower()
+    
+    if "you are" in message:
+        return message.replace("you are", "I am", 1)
+    else:   
+        reflections = {
+            "i": "you",
+            "me": "you",
+            "my": "your",
+            "am": "are",
+            "you": "me",
+            "your": "my"
+        }
 
-    reflections = {
-        "i": "you",
-        "me": "you",
-        "my": "your",
-        "am": "are",
-        "you": "me",
-        "your": "my"
-    }
-
-    words = message.lower().split()
+    words = message.split()
 
     reflected_words = [
         reflections.get(word, word)
@@ -115,8 +123,8 @@ def match_rule(rules, message):
 
     response = random.choice([
         "I'm not sure I understand. Can you tell me more?",
-        "How?",
-        "why?",
+        "How can I help you with that?",
+        "why do you say that?",
         "okay, ask me something else."
 
     ])
