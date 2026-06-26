@@ -44,7 +44,7 @@ h1{
     border:1px solid #edf0f5;
     border-radius:18px;
     padding:20px;
-    background:#fff;
+    background:#efefef;
 }
 
 /* Scrollbar */
@@ -65,7 +65,10 @@ h1{
 }
 
 .user{
-    justify-content:flex-end;
+     display: flex;
+    justify-content: flex-end;
+    margin: 12px 0;
+}
 }
 
 .bot{
@@ -75,7 +78,17 @@ h1{
 }
 
 /* Chat bubbles */
-.user p,
+.user p{
+       display: inline-block;
+    max-width: 75%;
+    padding: 12px 18px;
+    background: #ffffff;
+    color: #222;
+    border-radius: 18px 18px 5px 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    word-wrap: break-word;
+}
 .bot p{
     max-width:75%;
     padding:14px 18px;
