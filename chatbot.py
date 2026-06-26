@@ -21,7 +21,7 @@ rules = {
     r"do you remember (.*)": [
         "Did you think I would forget {0}?",
         "Why haven't you been able to forget {0}?",
-        "What about {0}?"
+        "It might be a good idea to focus on the present rather than {0}."
     ],
 
     r"i want (.*)": [
@@ -38,7 +38,7 @@ rules = {
     r"can you (.*)": [
         "What makes you think I can't {0}?",
         "If I could {0}, what would you do?",
-        "Why do you ask if I can {0}?"
+        "If you could teach me then I can {0}."
     ],
     r"i am (.*)": [
         "How long have you been {0}?",
@@ -46,7 +46,8 @@ rules = {
         "What does being {0} mean to you?"
     ],
     r"my name is (.*)": [
-        "Hello {0}, how can I help you today?"
+        "Hello {0}, how can I help you today?",
+        "Nice to meet you {0}. What can I do for you?"
     ],
     r"^(hello|hi|hey)$": [
         "Hello! How can I assist you today?",
@@ -60,16 +61,16 @@ rules = {
     ],
     r"are you (.*)": [
         "Why do you ask if I am {0}?",
-        "What makes you think I am {0}?",
+        "Well, you would know better than me. What do you think?",
         "Do you believe I am {0}?"
     ],
     r"do you (.*)": [
         "Why do you ask if I {0}?",
-        "What makes you think I {0}?",
+        "I would love to {0} if I could. What about you?",
         "Do you believe I {0}?"
     ],
-    r"I can (.*)": [
-        "How do you know you can {0}?",
+    r"i can (.*)": [
+        "Are you sure you can {0}?",
         "Teach me {0}?",
         "Why do you think you can {0}?"
     ],
@@ -79,11 +80,16 @@ rules = {
         "What makes you think I would {0}?"
     ],
     r"who (made|created) you(.*)": [
-        "Aman created me. He is a great programmer and a good friend of mine.",
+        "Aman created me. He is a great programmer and a good friend of mine."
     ],
     r"^you are (?!bot|a bot$)(.*)": [
         "No, you are {0}!",
         "Why do you think I am {0}?"
+    ],
+    r"i love (.*)": [
+        "Why do you love {0}?",
+        "Its nice to love {0}. What do you love about it?",
+        "How did you come to love {0}?"
     ]
 
 }
