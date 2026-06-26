@@ -10,7 +10,7 @@ async function sendMessage() {
 
     chatBox.innerHTML += `
         <div class="user">
-             ${message}
+             <p>${message}</p>
         </div>
     `;
 
